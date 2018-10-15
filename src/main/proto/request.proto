@@ -1,0 +1,23 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package io.vertx.grpc;
+
+message Request {
+
+  string id = 1;
+  string message = 2;
+
+}
+
+message Response {
+
+  string id = 1;
+  string message = 2;
+
+}
+
+service RequestService {
+
+  rpc makeRequest(Request) returns (Response);
+
+}
